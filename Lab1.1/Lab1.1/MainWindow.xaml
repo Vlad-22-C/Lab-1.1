@@ -1,0 +1,42 @@
+﻿<Window x:Class="Lab1._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1._1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="650" FontSize="36">
+    <Grid Margin="0,0,0,3">
+
+        <TextBox x:Name="A" Text="" HorizontalAlignment="Left" Width="223" Margin="91,69,0,337" UndoLimit="999999" FontSize="36"/>
+        <TextBox x:Name="B" Text="" HorizontalAlignment="Left" Width="223" Margin="91,307,0,100" UndoLimit="999999"/>
+
+        <Button x:Name="buttonPlus" Content="+" Click="Button_Click" Margin="44,192,546,201" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="0"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="0"/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="buttonMinus" Content="-" Click="Button_Click" Margin="122,192,465,201" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+        <Button x:Name="buttonMultiply" Content="*" Click="Button_Click" Margin="202,193,384,201"/>
+        <Button x:Name="buttonDivide" Content="/" Click="Button_Click" Margin="290,193,298,201"/>
+
+        <TextBlock x:Name="textResult" Text="0" Margin="402,196,10,201" IsEnabled="False"/>
+        <Label Content="=" HorizontalAlignment="Left" Height="71" Margin="361,188,0,0" VerticalAlignment="Top" Width="41"/>
+        <Label Content="А" HorizontalAlignment="Left" Margin="44,63,0,0" VerticalAlignment="Top" Width="40" Height="67"/>
+        <Label Content="Б" HorizontalAlignment="Left" Margin="44,300,0,0" VerticalAlignment="Top" Width="42" Height="67"/>
+    </Grid>
+</Window>
